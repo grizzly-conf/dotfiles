@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# [chezmoi] Placeholder für ${script}
+
+set -euo pipefail
+
+echo "[chezmoi] Reloading Hyprland session services and configs..."
+
+# Restart user services
+for svc in waybar mako hypridle; do
+    systemctl --user restart "${svc}.service"
+done
+
+echo "[chezmoi] hyprctl reload"
+hyprctl reload

@@ -1,0 +1,14 @@
+[Unit]
+Description=Waybar Status Bar
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/waybar
+Restart=on-failure
+RestartSec=3
+Environment=WAYLAND_DISPLAY=%t/wayland-0
+Environment=XDG_CURRENT_DESKTOP=Hyprland
+
+[Install]
+WantedBy=default.target
