@@ -6,9 +6,12 @@ set -euo pipefail
 echo "[chezmoi] Reloading Hyprland session services and configs..."
 
 # Restart user services
-for svc in waybar mako hypridle; do
+for svc in mako hypridle; do
     systemctl --user restart "${svc}.service"
 done
+
+pkill -x waybar || true
+waybar &
 
 echo "[chezmoi] hyprctl reload"
 hyprctl reload
