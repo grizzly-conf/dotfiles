@@ -5,7 +5,7 @@
 ~/.config/hypr/scripts/lock.sh
 
 # Kurze Pause, damit der Lockscreen erscheint
-sleep 0.5
+sleep 0.1
 
 # Suspend
 systemctl suspend
