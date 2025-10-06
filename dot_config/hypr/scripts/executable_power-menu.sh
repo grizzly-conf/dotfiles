@@ -4,7 +4,7 @@ CHOICE=$(echo -e "Lock\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -p "Power Me
 
 case "$CHOICE" in
     Lock)
-        ~/.config/hypr/scripts/lock.sh
+        hyprlock --lock
         ;;
     Suspend)
         systemctl suspend
