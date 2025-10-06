@@ -7,7 +7,7 @@ case "$CHOICE" in
         ~/.config/hypr/scripts/lock.sh
         ;;
     Suspend)
-        ~/.config/hypr/scripts/suspend.sh
+        systemctl suspend
         ;;
     Reboot)
         systemctl reboot
