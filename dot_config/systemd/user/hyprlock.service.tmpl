@@ -1,9 +1,6 @@
 [Unit]
 Description=Hyprlock Screen Lock
-# Startet automatisch, wenn hypridle startet
-PartOf=hypridle.service
-BindsTo=hypridle.service
-After=hypridle.service
+After=graphical.target
 
 [Service]
 Type=simple
@@ -12,5 +9,4 @@ Restart=on-failure
 RestartSec=2
 
 [Install]
-# Wird nicht direkt beim User-Login gestartet, nur über hypridle
 WantedBy=default.target
