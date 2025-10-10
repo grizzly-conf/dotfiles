@@ -10,3 +10,5 @@
 [user]
 	name = Sebastian Mueller
 	email = s.mueller@grizzlyweb.de
+[credential]
+	helper = store
