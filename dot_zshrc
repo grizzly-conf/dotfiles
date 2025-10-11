@@ -1,7 +1,25 @@
 
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/seb/.zshrc'
+# Optional: Zusätzliche Module aktivieren
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'git' \
+  'prompt' \
+  'autosuggestions' \
+  'syntax-highlighting'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+
+zstyle ':prezto:module:prompt' theme 'pure'
+
+# Prezto
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
