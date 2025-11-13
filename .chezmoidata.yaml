@@ -1,0 +1,32 @@
+data:
+  directions:
+    left:
+      keys: [h, left]
+    down:
+      keys: [j, down]
+    up: 
+      keys: [k, up]
+    right:
+      keys: [l, right]
+  hypr:
+    workspaces: 
+        1: 
+          key: code:10 
+        2:
+          key: code:11
+        3:
+          key: code:12
+        4:
+          key: code:13
+        5:
+          key: code:14
+        6:
+          key: code:15
+        7:
+          key: code:16
+        8:
+          key: code:17
+        9:
+          key: code:18
+        0:
+          key: code:19
