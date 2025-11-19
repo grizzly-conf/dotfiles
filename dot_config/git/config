@@ -12,3 +12,6 @@
 	email = s.mueller@grizzlyweb.de
 [credential]
 	helper = store
+
+[includeIf "gitdir:~/work/"]
+    path = ~/.config/git/config.work

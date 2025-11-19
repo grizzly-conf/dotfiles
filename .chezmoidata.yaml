@@ -1,13 +1,13 @@
 data:
   directions:
     left:
-      keys: [h, left]
+      keys: [left]
     down:
-      keys: [j, down]
+      keys: [down]
     up: 
-      keys: [k, up]
+      keys: [up]
     right:
-      keys: [l, right]
+      keys: [right]
   hypr:
     workspaces: 
         1: 
