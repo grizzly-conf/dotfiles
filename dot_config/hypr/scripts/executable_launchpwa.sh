@@ -7,7 +7,5 @@ profile="$1"
 url="$2"
 
 # launch PWA
-google-chrome-stable \
-  --profile-directory="$profile" \
-  --app="$url"
+google-chrome-stable --profile-dir="~/.config/google-chrome/$profile" --app="$url"
 
