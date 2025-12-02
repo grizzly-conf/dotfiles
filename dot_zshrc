@@ -26,10 +26,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:~/.local/share/JetBrains/Toolbox/scripts
 
-export DB_PORT=3306
-export WEBSERVER_HTTP_PORT=80
-export WEBSERVER_HTTPS_PORT=443
-
+source ~/.anymotion/bash
 
 alias ll='ls -la --color=auto'
 alias lsa='ll'
