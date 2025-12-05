@@ -19,6 +19,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+zinit load atuinsh/atuin
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -32,3 +34,6 @@ alias ll='ls -la --color=auto'
 alias lsa='ll'
 alias task='go-task'
 
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
