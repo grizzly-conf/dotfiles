@@ -33,7 +33,3 @@ alias lsa='ll'
 alias task='go-task'
 alias vim='nvim'
 
-. "$HOME/.atuin/bin/env"
-
-eval "$(atuin init zsh)"
-atuin gen-completions --shell zsh
