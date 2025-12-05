@@ -33,6 +33,7 @@ source ~/.anymotion/bash
 alias ll='ls -la --color=auto'
 alias lsa='ll'
 alias task='go-task'
+alias vim='nvim'
 
 . "$HOME/.atuin/bin/env"
 
