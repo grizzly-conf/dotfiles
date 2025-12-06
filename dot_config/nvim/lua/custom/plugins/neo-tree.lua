@@ -16,7 +16,7 @@ return {
 	opts = {
 		close_if_last_window = true,
 		filesystem = {
-			filtered_items: {
+			filtered_items = {
 				hide_hidden = true,
 			}
 			window = {
