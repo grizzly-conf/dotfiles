@@ -17,9 +17,9 @@ return {
 		close_if_last_window = true,
 		filesystem = {
 			filtered_items = {
-				hide_dotfiles = true,
-				hide_gitignored = true,
-				hide_hidden = true,
+				hide_dotfiles = false,
+				hide_gitignored = false,
+				hide_hidden = false,
 			},
 			window = {
 				mappings = {
