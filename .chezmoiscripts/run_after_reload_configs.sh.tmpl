@@ -10,8 +10,5 @@ for svc in mako hypridle; do
     systemctl --user restart "${svc}.service"
 done
 
-pkill -x waybar || true
-waybar &
-
 echo "[chezmoi] hyprctl reload"
 hyprctl reload
