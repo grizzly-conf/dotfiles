@@ -18,7 +18,7 @@ return {
 		filesystem = {
 			filtered_items = {
 				hide_hidden = true,
-			}
+			},
 			window = {
 				mappings = {
 					["\\"] = "close_window",
