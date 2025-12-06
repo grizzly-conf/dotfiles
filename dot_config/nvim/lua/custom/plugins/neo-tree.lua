@@ -16,6 +16,7 @@ return {
 	opts = {
 		close_if_last_window = true,
 		filesystem = {
+			hide_hidden = true,
 			window = {
 				mappings = {
 					["\\"] = "close_window",
