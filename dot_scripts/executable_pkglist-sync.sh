@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-JSON="$HOME/.local/share/chezmoi/explicit-packages.json"
+JSON="$HOME/.local/share/chezmoi/pkglist.json"
 HOST="$(hostnamectl --static)"
 
 [ -f "$JSON" ] || echo "[]" > "$JSON"
