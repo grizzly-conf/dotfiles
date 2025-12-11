@@ -36,4 +36,4 @@ alias lsa='ll'
 alias task='go-task'
 alias vim='nvim'
 
-alias website-status-checker='docker run --rm -it -v "$(pwd):/app" gitlab.anymotion.de:4567/devops/software/website-status-check:latest'
+alias website-status-checker='docker run --rm -it -v "$(pwd):/app" /etc/hosts:/etc/hosts gitlab.anymotion.de:4567/devops/software/website-status-check:latest'
