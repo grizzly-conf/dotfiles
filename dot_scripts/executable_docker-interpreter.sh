@@ -1,23 +1,12 @@
 #!/usr/bin/env bash
+set -e
 
-IMAGE_NAME="openinterpreter"
+# Resolve script directory (so compose.yml is always referenced correctly)
+SCRIPT_DIR="/opt/docker/open_interpreter/"
 
-# build image if missing
-if [[ -z "$(docker images -q $IMAGE_NAME 2>/dev/null)" ]]; then
-  cat <<EOF > Dockerfile
-FROM python:3.11-slim
-RUN pip install --no-cache-dir open-interpreter
-ENTRYPOINT ["interpreter"]
-EOF
-  docker build -t $IMAGE_NAME .
-  rm Dockerfile
-fi
+# Set WORKSPACE to current dir if not already set
+export WORKSPACE="${WORKSPACE:-$(pwd)}"
 
-# run interpreter once, forward all script arguments
-docker run --rm \
-  -v "$(pwd)":/workspace \
-  -v "$HOME/ai-space":/ai-space \
-  -w /workspace \
-  $IMAGE_NAME \
-  "$@"
-
+# Run interpreter via docker-compose with environment variables expanded inside container
+docker compose -f "$SCRIPT_DIR/docker-compose.yml" run --rm --entrypoint sh interpreter \
+  -c 'interpreter -y --api_base="$API_BASE" --api_key="$API_KEY" "$@"' -- "$@"
