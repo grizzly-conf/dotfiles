@@ -9,4 +9,4 @@ export WORKSPACE="${WORKSPACE:-$(pwd)}"
 
 # Run interpreter via docker-compose with environment variables expanded inside container
 docker compose -f "$SCRIPT_DIR/docker-compose.yml" run --rm --entrypoint sh interpreter \
-  -c 'interpreter -y --no-tools --api_base="$API_BASE" --api_key="$API_KEY" "$@"' -- "$@"
+  -c 'interpreter -y --api_base="$API_BASE" --api_key="$API_KEY" "$@"' -- "$@"
