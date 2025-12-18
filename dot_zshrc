@@ -40,3 +40,4 @@ alias website-status-checker='docker run --rm -it -v "$(pwd):/app" /etc/hosts:/e
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/seb/.lmstudio/bin"
+export PATH="$PATH:/home/seb/.scripts"
