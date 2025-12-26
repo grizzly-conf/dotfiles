@@ -9,6 +9,12 @@ profiles=(
   haupt
 )
 
+if [[ -n "$1" ]]; then
+  ln -sf "$DIR/$1.conf" "$CURRENT"
+  hyprctl reload
+  exit 0
+fi
+
 # resolve current profile
 current="$(readlink "$CURRENT" 2>/dev/null | xargs -n1 basename | sed 's/\.conf$//')"
 
