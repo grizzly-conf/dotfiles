@@ -47,4 +47,5 @@ export PATH="$PATH:/home/seb/.scripts"
 
 
 alias anytool_build='docker build -t "anytool:debug" ~/coding/work/anymotion/tooling/dev-tooling-poc/anytool'
+alias anytool_sh='docker run -it -u 1000:1000 -v "$PWD:/home/anytool/workspace" -v "/var/run/docker.sock:/var/run/docker.sock" --entrypoint sh "anytool:debug"'
 alias anytool='docker run -it -u 1000:1000 -v "$PWD:/home/anytool/workspace" -v "/var/run/docker.sock:/var/run/docker.sock" "anytool:debug"'
