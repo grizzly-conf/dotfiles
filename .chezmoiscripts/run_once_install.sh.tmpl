@@ -1,4 +1,26 @@
 #!/usr/bin/env bash
+exit
+
+{{ if (contains `arch` .chezmoi.kernel.osrelease) }}
+
+# Install official packages
+pacman -S --noconfirm --needed git zsh base-devel neovim kitty yazi
+
+# Install yay from AUR
+sudo -u "{{ .chezmoi.username }}" git clone https://aur.archlinux.org/yay.git /tmp/yay
+(
+  cd /tmp/yay
+  sudo -u "{{ .chezmoi.username }}" makepkg -si --noconfirm
+)
+rm -rf /tmp/yay
+
+# Install AUR packages via yay
+sudo -u "" yay -S --noconfirm atuin
+
+{{ end }}
+
+
+
 if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ]; then
   git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 fi
