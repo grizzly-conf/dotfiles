@@ -23,6 +23,7 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
 else
     hyprctl notify 1 5000 "rgb(d20f39)" "Focusmode [OFF]"
     hyprctl reload
+    hyprpanel &
     exit 0
 fi
 exit 1
