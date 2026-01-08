@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/.config/hypr/monitors"
+DIR="$HOME/.config/hypr/hyprland/monitors"
 CURRENT="$DIR/current.conf"
 
 profiles=(
