@@ -16,6 +16,8 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
         keyword decoration:rounding 0;\
 	keyword windowrule 'opacity 1.0 1.0 override override, class:.*';
     "
+    hyprpanel -q
+
     hyprctl notify 1 5000 "rgb(40a02b)" "Focusmode [ON]"
     exit
 else

@@ -10,5 +10,7 @@ for svc in mako hypridle; do
     systemctl --user restart "${svc}.service"
 done
 
+hyprpanel -q; hyprpanel &
+
 echo "[chezmoi] hyprctl reload"
 hyprctl reload
