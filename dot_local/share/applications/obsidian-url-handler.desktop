@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/usr/bin/obsidian %u
+Type=Application
+Terminal=false
+MimeType=x-scheme-handler/obsidian;
+NoDisplay=true
