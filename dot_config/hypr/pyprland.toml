@@ -1,0 +1,14 @@
+[pyprland]
+plugins = [
+    "scratchpads",
+    "magnify",
+]
+
+
+[scratchpads.dashboard]
+command = "obsidian"          # wird gestartet, falls noch nicht läuft
+animation = "fromTop"
+unfocus = "hide"              # auto-close wenn du was anderes fokussierst
+size = "80% 80%"
+margin = 50
+lazy = true                   # erst starten, wenn nötig
