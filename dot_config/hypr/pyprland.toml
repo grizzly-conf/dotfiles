@@ -7,7 +7,6 @@ plugins = [
 
 [scratchpads.dashboard]
 command = "obsidian"          # wird gestartet, falls noch nicht läuft
-unfocus = "hide"              # auto-close wenn du was anderes fokussierst
-size = "80% 800px"
-position = "0% 50%"
-margin = 50
+#unfocus = "hide"              # auto-close wenn du was anderes fokussierst
+size = "1200px 90%"
+position = "30% 5%"
